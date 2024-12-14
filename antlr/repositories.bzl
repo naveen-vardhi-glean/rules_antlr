@@ -3,13 +3,18 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_jar")
 load(":lang.bzl", "C", "CPP", "GO", "JAVA", "OBJC", "PYTHON", "PYTHON2", "PYTHON3", supportedLanguages = "supported")
 
-v4 = [4, "4.7.1", "4.7.2", "4.8"]
+v4 = [4, "4.7.1", "4.7.2", "4.8", "4.13.1"]
 v4_opt = [4, "4.7.1", "4.7.2", "4.7.3", "4.7.4"]
 v3 = [3, "3.5.2"]
 v2 = [2, "2.7.7"]
 
 PACKAGES = {
     "antlr": {
+        "4.13.1": {
+            "url": "https://github.com/antlr/antlr4/archive/4.13.1.tar.gz",
+            "prefix": "antlr4-4.13.1",
+            "sha256": "da20d487524d7f0a8b13f73a8dc326de7fc2e5775f5a49693c0a4e59c6b1410c",
+        },
         "4.8": {
             "url": "https://github.com/antlr/antlr4/archive/4.8.tar.gz",
             "prefix": "antlr4-4.8",
